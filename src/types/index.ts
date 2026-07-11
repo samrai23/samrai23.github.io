@@ -59,6 +59,8 @@ export interface Project {
   category: string;
   tags: string[];
   highlights: string[];
+  /** Optional external URL (e.g. GitHub repo) rendered as a link on the card */
+  link?: string;
 }
 
 export interface Accomplishment {

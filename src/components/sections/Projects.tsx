@@ -39,6 +39,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
         <Tag key={tag} label={tag} variant="default" />
       ))}
     </div>
+
+    {project.link && (
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-card__link"
+      >
+        View Repo ↗
+      </a>
+    )}
   </article>
 );
 

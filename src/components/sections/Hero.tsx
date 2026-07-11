@@ -261,10 +261,12 @@ const Hero: React.FC = () => {
               <span className="hero__badge hero__badge--swift" aria-hidden="true">🐍 Python</span>
               <span className="hero__badge hero__badge--react" aria-hidden="true">☁ GCP</span>
               <span className="hero__badge hero__badge--ai" aria-hidden="true">✦ Spark</span>
+              <span className="hero__badge hero__badge--aws" aria-hidden="true">▲ AWS</span>
+              <span className="hero__badge hero__badge--langgraph" aria-hidden="true">⛓ LangGraph</span>
 
               <div className="hero__avatar-wrap">
                 <img
-                  src={`${import.meta.env.BASE_URL}profile.png`}
+                  src={`${import.meta.env.BASE_URL}profile.jpg`}
                   alt={`${personal.name} profile photo`}
                   className="hero__avatar-img"
                 />

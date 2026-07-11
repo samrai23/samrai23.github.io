@@ -523,3 +523,21 @@
   animation: float 7s ease-in-out infinite 2.2s;
 }
 
+.hero__badge--aws {
+  background: rgba(255, 153, 0, 0.13);
+  color: #ff9900;
+  border: 1px solid rgba(255, 153, 0, 0.25);
+  top: 16%;
+  left: -8%;
+  animation: float 6s ease-in-out infinite 0.6s;
+}
+
+.hero__badge--langgraph {
+  background: rgba(168, 85, 247, 0.13);
+  color: #a855f7;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  bottom: 8%;
+  right: -2%;
+  animation: float 5s ease-in-out infinite 1.6s;
+}
+

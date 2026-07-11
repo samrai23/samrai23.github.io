@@ -198,6 +198,20 @@ export const projects: Project[] = [
       'Deployed Terraform-managed infrastructure across DEV/UAT/PROD with Pub/Sub alerting, reducing support tickets by 40% while maintaining 99.95% SLA',
     ],
   },
+  {
+    id: 5,
+    title: 'Delete Archival Workflow',
+    description:
+      'An automated data retention framework that removes outdated partitions from Hive tables and GCS buckets on a configurable schedule.',
+    category: 'Data Engineering',
+    tags: ['PySpark', 'Google Dataproc', 'Python', 'Hive'],
+    highlights: [
+      'Automated data deletion based on configurable per-table retention policies with day- or week-based cadence',
+      'Partition-aware deletion for Hive tables, driven by a single config.json across multiple data sources',
+      'Dynamic Dataproc cluster provisioning and teardown with comprehensive logging throughout the workflow',
+    ],
+    link: 'https://github.com/samrai23/delete-archival',
+  },
 ];
 
 // ─── Accomplishments ──────────────────────────────────────────────────────────

@@ -406,6 +406,23 @@
   margin-top: auto;
 }
 
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  align-self: flex-start;
+  transition: color var(--transition-fast);
+}
+
+.project-card__link:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
 /* ─── 15. Accomplishments ─────────────────────────────────────────────────── */
 
 .accomplishments__grid {
