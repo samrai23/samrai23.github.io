@@ -1,0 +1,163 @@
+/* ─── 18. Responsive ──────────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-12);
+    padding-top: calc(var(--navbar-height) + var(--space-8));
+  }
+
+  .hero__content {
+    align-items: center;
+  }
+
+  .hero__summary {
+    max-width: 600px;
+  }
+
+  .hero__visual {
+    justify-content: center;
+    padding-top: 0;
+    order: -1;
+  }
+
+  .hero__visual-stack {
+    width: 300px;
+    height: 430px;
+  }
+
+  .hero__avatar-wrap {
+    width: 300px;
+    height: 360px;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .hero__stats {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 5rem 0 4rem;
+  }
+
+  .navbar__links,
+  .navbar__cta,
+  .navbar__actions {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  /* ── Fix 1: hide scroll indicator — it overlaps hero content on mobile ── */
+  .hero__scroll-indicator {
+    display: none;
+  }
+
+  /* ── Fix 2: add bottom breathing room so marquee doesn't butt directly
+        against the hero content's last element ── */
+  .hero {
+    padding-bottom: var(--space-10);
+  }
+
+  /* ── Fix 3a: give the projects scroll-track top padding so box-shadow /
+        translateY(-4px) on tap isn't clipped by overflow ── */
+  .projects__grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: var(--space-4);
+    padding-top: 8px;    /* room for upward card lift */
+    padding-bottom: var(--space-4);
+  }
+
+  .projects__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Each project card snaps to start; peeks next card at right */
+  .projects__grid > * {
+    flex: 0 0 84vw;
+    scroll-snap-align: start;
+  }
+
+  .accomplishments__grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .education__card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .experience__header {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .experience__meta {
+    align-items: flex-start;
+  }
+
+  .aurora__beam--3 {
+    display: none;
+  }
+
+  .hero__badge {
+    display: none;
+  }
+
+  .scroll-top {
+    bottom: var(--space-5);
+    right: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .experience__timeline {
+    padding-left: var(--space-8);
+  }
+
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__stats {
+    gap: var(--space-5);
+  }
+}
+
+/* ── Fix 3b: on true touch devices (no hover) disable the translateY lift
+      on cards — eliminates overflow-clipping for cards inside scroll tracks ── */
+@media (hover: none) {
+  .project-card:hover,
+  .accomplishment-card:hover,
+  .experience__card:hover,
+  .card--hoverable:hover {
+    transform: none;
+  }
+}

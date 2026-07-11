@@ -1,0 +1,22 @@
+/*
+ * globals.css — Portfolio Design System · Entry Point
+ * ====================================================
+ * This file only imports the split stylesheets.
+ * Edit the individual files for changes:
+ *
+ *  base.css        — Design tokens, CSS reset, typography, layout utils, animations
+ *  navbar.css      — Navbar & resume preview modal
+ *  hero.css        — Hero section, aurora, typed role, badges, scroll indicator
+ *  components.css  — Section, Tag, Card commons; progress bar, cursor, noise, marquee
+ *  sections.css    — About, Skills, Experience, Projects, Accomplishments, Education
+ *  layout.css      — Footer
+ *  responsive.css  — All @media queries
+ */
+
+@import './base.css';
+@import './navbar.css';
+@import './hero.css';
+@import './components.css';
+@import './sections.css';
+@import './layout.css';
+@import './responsive.css';
